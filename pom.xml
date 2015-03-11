@@ -14,8 +14,9 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<fdfs.client.version>0.0.1-SNAPSHOT</fdfs.client.version>
 		<junit.version>4.9</junit.version>
-		<netty.version>4.0.13.Final</netty.version>
+		<netty.version>5.0.0.Alpha2</netty.version>
 		<guava.version>18.0</guava.version>
 		<commons-lang.version>2.6</commons-lang.version>
 		<slf4j-api.version>1.7.5</slf4j-api.version>
@@ -25,13 +26,15 @@
 		<spring.scope>provide</spring.scope>
 		<im4java.version>1.4.0</im4java.version>
 		<servlet-api.version>2.5</servlet-api.version>
+		<javassist.version>3.12.1.GA</javassist.version>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>org.zoo</groupId>
-				<artifactId>hippo-common</artifactId>
+				<groupId>com.zoo.fdfs</groupId>
+				<artifactId>fdfs-client</artifactId>
+				<version>${fdfs.client.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>junit</groupId>
@@ -165,6 +168,11 @@
 				<groupId>javax.servlet</groupId>
 				<artifactId>servlet-api</artifactId>
 				<version>${servlet-api.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>javassist</groupId>
+				<artifactId>javassist</artifactId>
+				<version>${javassist.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
