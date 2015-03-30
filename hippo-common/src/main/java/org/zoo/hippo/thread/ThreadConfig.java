@@ -9,9 +9,9 @@ import java.io.Serializable;
  * @date 2015-3-23
  */
 public class ThreadConfig implements Serializable {
-   
+
     private static final long serialVersionUID = 6726580965130772072L;
-    
+
     private String name;
     private int threads;
     private int queues;
@@ -44,6 +44,12 @@ public class ThreadConfig implements Serializable {
 
     public void setQueues(int queues) {
         this.queues = queues;
+    }
+
+
+    @Override
+    public String toString() {
+        return "ThreadConfig [name=" + name + ", threads=" + threads + ", queues=" + queues + "]";
     }
 
 }
