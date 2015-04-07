@@ -17,6 +17,18 @@ public class ThreadConfig implements Serializable {
     private int queues;
 
 
+    public ThreadConfig() {
+
+    }
+
+
+    public ThreadConfig(String name, int threads, int queues) {
+        this.name = name;
+        this.threads = threads;
+        this.queues = queues;
+    }
+
+
     public String getName() {
         return name;
     }
