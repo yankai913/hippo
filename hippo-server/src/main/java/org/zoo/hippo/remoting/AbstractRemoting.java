@@ -23,9 +23,8 @@ public abstract class AbstractRemoting {
     private final AbstractBootstrap<?, ?> bootstrap;
 
 
-    public AbstractRemoting(AbstractBootstrap<?, ?> bootstrap) throws HippoException {
+    public AbstractRemoting(AbstractBootstrap<?, ?> bootstrap) {
         this.bootstrap = bootstrap;
-        start();
     }
 
 

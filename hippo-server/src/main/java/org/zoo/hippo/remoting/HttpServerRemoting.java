@@ -31,7 +31,7 @@ public class HttpServerRemoting extends AbstractRemoting {
     private ChannelInitializer<SocketChannel> channelInitializer;
 
 
-    public HttpServerRemoting(int port) throws HippoException {
+    public HttpServerRemoting(int port) {
         super(new ServerBootstrap());
         this.bindAddress = new InetSocketAddress(NetUtils.getLocalAddress().getHostAddress(), port);
     }

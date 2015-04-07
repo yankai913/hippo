@@ -2,6 +2,7 @@ package org.zoo.hippo.core.config;
 
 import java.io.Serializable;
 import java.util.Map;
+import java.util.Set;
 
 import org.zoo.hippo.thread.ThreadConfig;
 
@@ -15,9 +16,7 @@ public class HippoConfig implements Serializable {
 
     private static final long serialVersionUID = 437777871173513704L;
 
-    private int width;
-
-    private int height;
+    private Set<String> sizeSet;// 宽x高，例如100x100
 
     private String regex;
 
@@ -26,26 +25,6 @@ public class HippoConfig implements Serializable {
     private long fetchTimeout;
 
     private Map<String, ThreadConfig> threadConfigMap;
-
-
-    public int getWidth() {
-        return width;
-    }
-
-
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-
-    public int getHeight() {
-        return height;
-    }
-
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
 
 
     public String getRegex() {
@@ -85,6 +64,16 @@ public class HippoConfig implements Serializable {
 
     public void setThreadConfigMap(Map<String, ThreadConfig> threadConfigMap) {
         this.threadConfigMap = threadConfigMap;
+    }
+
+
+    public Set<String> getSizeSet() {
+        return sizeSet;
+    }
+
+
+    public void setSizeSet(Set<String> sizeSet) {
+        this.sizeSet = sizeSet;
     }
 
 }
